@@ -2,10 +2,14 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/css/contact.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/contact.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <title>Contact</title>
 </head>
 
@@ -19,8 +23,64 @@
     </div>
   </div>
   <h1>"Contact"</h1>
-  <div class="about">
-    <div class="terminal">
+  <h2>these windows are now draggable ! </h2>
+
+  <div class="container">
+    <div id="drag-1" class="draggable">
+      <div class="fakeMenu">
+        <div class="fakeButtons fakeClose"></div>
+        <div class="fakeButtons fakeMinimize"></div>
+        <div class="fakeButtons fakeZoom"></div>
+      </div>
+      <div class="fakeScreen">
+        <p class="line1">
+          &#91;&nbsp;&ldquo;My Instagram link :&rdquo;,<span class="cursor1">_</span>
+        </p>
+        <p class="line2">
+          <a href="https://www.instagram.com/tonioo.rbr/"
+            target="_blank">&nbsp;&nbsp;&ldquo;@tonioo.rbr&rdquo;,</a><span class="cursor2">_</span>
+        </p>
+        <p class="line3">
+          &nbsp;&nbsp;&ldquo;Go talk to me here&rdquo;&nbsp;&#93;<span class="cursor3">_</span>
+        </p>
+        <p class="line4">><span class="cursor4">_</span></p>
+      </div>
+    </div>
+
+    <div id="drag-1" class="draggable">
+      <div class="fakeMenu">
+        <div class="fakeButtons fakeClose"></div>
+        <div class="fakeButtons fakeMinimize"></div>
+        <div class="fakeButtons fakeZoom"></div>
+      </div>
+      <div class="fakeScreen">
+        <p class="line1">
+          &#91;&nbsp;&ldquo;My Linkedin link :&rdquo;,<span class="cursor1">_</span>
+        </p>
+        <p class="line2">
+          <a href="https://www.linkedin.com/in/anthony-ribeiro-450516273"
+            target="_blank">&nbsp;&nbsp;&ldquo;anthony-ribeiro&rdquo;,</a><span class="cursor2">_</span>
+        </p>
+        <p class="line3">
+          &nbsp;&nbsp;&ldquo;For any info about me&rdquo;&nbsp;&#93;<span class="cursor3">_</span>
+        </p>
+        <p class="line4">><span class="cursor4"></span></p>
+      </div>
+    </div>
+    <div id="drag-1" class="draggable">
+      <div class=fakeMenu>
+        <div class="fakeButtons fakeClose"></div>
+        <div class="fakeButtons fakeMinimize"></div>
+        <div class="fakeButtons fakeZoom"></div>
+      </div>
+      <div class="fakeScreen">
+        <p class="line1">&#91;&nbsp;&ldquo;My Discord id :&rdquo;,<span class="cursor1">_</span></p>
+        <p class="line2">&nbsp;&nbsp;&ldquo;Eien no#1948.&rdquo;,<span class="cursor2">_</span></p>
+        <p class="line3">&nbsp;&nbsp;&ldquo;Ask me your things&rdquo;&nbsp;&#93;<span class="cursor3">_</span></p>
+        <p class="line4">><span class="cursor4"></span></p>
+      </div>
+    </div>
+    <div id="drag-1" class="draggable">
       <div class=fakeMenu>
         <div class="fakeButtons fakeClose"></div>
         <div class="fakeButtons fakeMinimize"></div>
@@ -34,49 +94,10 @@
         <p class="line4">><span class="cursor4">_</span></p>
       </div>
     </div>
-    <div class="terminal">
-      <div class=fakeMenu>
-        <div class="fakeButtons fakeClose"></div>
-        <div class="fakeButtons fakeMinimize"></div>
-        <div class="fakeButtons fakeZoom"></div>
-      </div>
-      <div class="fakeScreen">
-        <p class="line1">&#91;&nbsp;&ldquo;My Discord id :&rdquo;,<span class="cursor1">_</span></p>
-        <p class="line2">&nbsp;&nbsp;&ldquo;Eien no#1948.&rdquo;,<span class="cursor2">_</span></p>
-        <p class="line3">&nbsp;&nbsp;&ldquo;Ask me your things&rdquo;&nbsp;&#93;<span class="cursor3">_</span></p>
-        <p class="line4">><span class="cursor4"></span></p>
-      </div>
-    </div>
-    <div class="terminal">
-      <div class=fakeMenu>
-        <div class="fakeButtons fakeClose"></div>
-        <div class="fakeButtons fakeMinimize"></div>
-        <div class="fakeButtons fakeZoom"></div>
-      </div>
-      <div class="fakeScreen">
-        <p class="line1">&#91;&nbsp;&ldquo;My Linkedin link :&rdquo;,<span class="cursor1">_</span></p>
-        <p class="line2"><a href="https://www.linkedin.com/in/anthony-ribeiro-450516273"
-            target="_blank">&nbsp;&nbsp;&ldquo;anthony-ribeiro&rdquo;,</a><span class="cursor2">_</span></p>
-        <p class="line3">&nbsp;&nbsp;&ldquo;For any info about me&rdquo;&nbsp;&#93;<span class="cursor3">_</span></p>
-        <p class="line4">><span class="cursor4"></span></p>
-      </div>
-    </div>
-    <div class="terminal">
-      <div class=fakeMenu>
-        <div class="fakeButtons fakeClose"></div>
-        <div class="fakeButtons fakeMinimize"></div>
-        <div class="fakeButtons fakeZoom"></div>
-      </div>
-      <div class="fakeScreen">
-        <p class="line1">&#91;&nbsp;&ldquo;My Instagram link :&rdquo;,<span class="cursor1">_</span></p>
-        <p class="line2"><a href="https://www.instagram.com/tonioo.rbr/"
-            target="_blank">&nbsp;&nbsp;&ldquo;@tonioo.rbr&rdquo;,</a><span class="cursor2">_</span></p>
-        <p class="line3">&nbsp;&nbsp;&ldquo;Go talk to me here&rdquo;&nbsp;&#93;<span class="cursor3">_</span></p>
-        <p class="line4">><span class="cursor4">_</span></p>
-      </div>
-    </div>
+  </div>
+
   </div>
 </body>
-<script src="/js/about.js"></script>
+<script src="/js/contact.js"></script>
 
 </html>
