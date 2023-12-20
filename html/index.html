@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/projet.css">
+    <title>PortFolio</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/3.2.5/tinysort.min.js"></script>
+    <script type="text/javascript" src="/js/jscolor.js"></script>
+    <script type="text/javascript" src="/js/jscolor.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <div id="staffList">
+            <div class="item about" draggable="true" data-tilt onclick="scrollToSection('aboutMeSection')">
+                <h3>About me</h3>
+                <p class="p">I'm a French student from Ynov Lyon Campus and I'm a 1st year computer science student.
+                    I'm 19y and codding is my passion.
+                    My passions are sport and music
+
+                    Location : 'Lyon'
+
+                    Contact me : 'anthony.ribeiro@ynov.com'</p>
+                <img src="/image/qrcode_1_-removebg-preview.png">
+            </div>
+
+            <div class="item contact" draggable="true" data-tilt onclick="scrollToSection('contactMeSection')">
+                <h3>Contact Me</h3>
+                <h2>---------------</h2>
+                <p class="p">Instagram -----------1.50
+
+                    Github --------------4.75
+
+                    Linkedin -----------10.00
+
+                    Discord -------------4.00
+                </p>
+                <h2>---------------</h2>
+                <img src="/image/barcode_1_-removebg-preview.png">
+            </div>
+
+            <div class="item education" draggable="true" data-tilt onclick="scrollToSection('educationSection')">
+                <h3>Education</h3>
+                <h2>---------------</h2>
+                <p class="bold2 p">BAC GENERAL mention bien</p>
+                <p>College-lycée:
+                    Ste Marie Lyon La Verpilliere-2022
+                    Mathématiques-Géopolitique-LLCER</p>
+                <h2>---------------</h2>
+                <p class="bold2">BACHELOR INFORMATIQUE 2E ANNEE</p>
+                <p>Lyon Ynov Campus 2023-2024</p>
+                <h2>---------------</h2>
+                <img src="/image/barcode-removebg-preview.png">
+            </div>
+
+            <div class="item experience" draggable="true" data-tilt>
+                <h3>Experiences</h3>
+                <h2>---------------</h2>
+                <p class="bold2 p">Agent d’exploitation LPA</p>
+                <p class="p"> Établissement LPA Saint-Jean, agent d’exploitation chargé de la sécutité, de la propreté
+                    et du
+                    bien-etre
+                    du parking et
+                    des clients</p>
+                <h2>---------------</h2>
+                <p class="bold2 p">Projet étudiant :Guide des jeunes</p>
+                <p class="p"> Site web désigné aux jeunes fait par des jeunes afin d' aider les jeunes entrant dans la
+                    vie
+                    active
+                    grace à des blogs,
+                    des posts/storys. Poste de dev-web pour le site internet du projet. (guidedesjeunes.com)</p>
+                <img src="/image/barcode-removebg-preview.png">
+            </div>
+
+            <div class="item functions" draggable="true" data-tilt>
+                <h3>Fonctionnalités</h3>
+                <div class="func">
+                    <input type="color" id="colorPicker">
+                    <button onclick="changerCouleur()">OK</button>
+                </div>
+                <p>Color Change</p>
+
+            </div>
+
+            <div class="item photo" draggable="true" data-tilt>
+                <h3>Photo</h3>
+                <img src="/image/hawks_7352.jpg">
+                <p class="bold p">Tonio</p>
+                <p class="bold p">Taunz</p>
+            </div>
+
+            <div class="item large project" draggable="true">
+                <div class="projectcontainer">
+                    <div class="leftpart">
+                        <div class="salle">
+                            <span class="movie bold">Project</span>
+                            <span class="title bold">Salle 104</span>
+                        </div>
+                        <div class="desc" id="projectDesc">
+                            <p class="b">Initial content for the project.</p>
+                        </div>
+                    </div>
+                    <div class="rightpart">
+                        <div class="listeproj">
+                            <a class="projetA" onclick="changeProjectContent('YDays')">YDays</a>
+                            <a class="projetA" onclick="changeProjectContent('Simon')">Simon</a>
+                            <a class="projetA" onclick="changeProjectContent('Boxxle')">Boxxle</a>
+                            <a class="projetA" onclick="changeProjectContent('Groupie')">Groupie</a>
+                            <a class="projetA" onclick="changeProjectContent('Hangman')">Hangman</a>
+                            <a class="projetA" onclick="changeProjectContent('Sortable')">Sortable</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/js/tilt.jquery.js"></script>
+        <script src="/js/projet.js"></script>
+        <script type="text/javascript">
+            function changeProjectContent(projectName) {
+                var descElement = document.getElementById('projectDesc');
+                if (projectName === 'YDays') {
+                    descElement.innerHTML = '<p>Les YDays consistent à être le projet principal de mon école avec d\'autres fillières.</p>' +
+                        '<p>Nous l\'avons réalisé avec plusieurs personnes de différentes fillières.</p>' +
+                        '<p>Nous avons utilisé Angular pour le site web.</p>' +
+                        '<p>L\'objectif était de créer un site web ayant pour but d\'aider les jeunes.</p>' +
+                        '<div class="link">Vous pouvre retrouvez le lien ici: <a href="https://guidedesjeunes.com"> here</a>.</div > ';
+
+                } else if (projectName === 'Simon') {
+                    descElement.innerHTML = '<p>Simon est ...</p>';
+                } else if (projectName === 'Boxxle') {
+                    descElement.innerHTML = '<p>Le projet ' + projectName + ' est le résultat d\'un examen</p>' +
+                        '<p>Nous l\'avons réalisé en duo avec Clément Couble.</p>' +
+                        '<p>Nous avons utilisé JavaScript et Html/Css.</p>' +
+                        '<p>L\'objectif était de faire un jeu de type Sokoban en JS.</p>' +
+                        '<div class="link">Vous pouvez retrouvez le github: <a href="https://ytrack.learn.ynov.com/git/ranthony/Boxxle.git"> here</a>.</div > ';
+                } else if (projectName === 'Groupie') {
+                    descElement.innerHTML = '<p>Le projet ' + projectName + ' est le resutat d\'un examen.</p>' +
+                        '<p>Nous l\'avons réalisé en trio avec Léo Sallet et Bastien Exposito.</p>' +
+                        '<p>Nous avons utilisé Golang et Html/Css et une API.</p>' +
+                        '<p>L\'objectif était de faire un site web qui peut tracker un artiste grâce à une API.</p>' +
+                        '<div class="link">Vous pouvez retrouvez le github: <a href="https://github.com/Lyon-Ynov-Campus/groupie-tracker-wewe.git"> here</a>.</div >';
+                } else if (projectName === 'Hangman') {
+                    descElement.innerHTML = '<p>Le projet ' + projectName + ' est le resultat d\'examen</p>' +
+                        '<p>Nous l\'avons réalisé en duo avec Léo Sallet.</p>' +
+                        '<p>Nous avons utilisé Golang et Html/Css.</p>' +
+                        '<p>L\'objectif était de faire un site web où l\'on peut trouver un jeu du pendu.</p>' +
+                        '<div class="link">Vous pouvez retrouvez le github: <a href="https://github.com/EienNo00/HangmanWeb.git"> here</a>.</div >';
+                } else if (projectName === 'Sortable') {
+                    descElement.innerHTML = '<p>Le projet ' + projectName + ' est le resultat d\'un examen</p>' +
+                        '<p>Nous l\'avons réalisé en duo avec Axel Giraudon.</p>' +
+                        '<p>Nous avons utilisé JavaScript et Html/Css et une API.</p>' +
+                        '<p>L\'objectif était de faire un tableau sortable avec l\'utilisation d\'une API.</p>' +
+                        '<div class="link">Vous pouvez retrouvez le github: <a href="https://ytrack.learn.ynov.com/git/gaxel/sortable.git"> here</a>.</div >';
+                }
+            }
+
+
+        </script>
+    </section>
+    <section id="aboutMeSection">
+        <div class="AboutMe Container">
+            <div class="textTitle">( About me )</div>
+            <div class="aboutC">
+                <div class="cardCont">
+                    <div class="about1">Anthony Ribeiro is a creative developer.</div>
+                    <div class="about2">He tries to focus and doing smooth animation and cool object to interact with.
+                    </div>
+                    <div class="about3">Working and studying at Lyon to improve his skills.</div>
+                    <div class="about4">He is a student at Ynov Lyon Campus.</div>
+                    <div class="about5"><a href="#" class="resume">Here you can find his resume.</a></Here>
+                    </div>
+
+                </div>
+                <div class="cardCont2">
+                    <div class="item-a">
+                        <div class="wrapper">
+                            <div class="image-wrapper">
+                                <img
+                                    src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1583&q=80" />
+                            </div>
+                            <div class="header-wrapper">
+                                <h1>Music</h1>
+                                <h1>See Project</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-b">Coding</div>
+                    <div class="item-c">Sport</div>
+                    <div class="item-d">Video Games</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="contactMeSection">
+        <div class="ContactMe Container">
+            <div class="textTitle">( Contact me )</div>
+        </div>
+    </section>
+    <section id="educationSection">
+        <div class="Education Container">
+            <div class="textTitle">( Education )</div>
+        </div>
+
+</body>
+<script type="text/javascript">
+
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
+
+</script>
+
+
+</html>

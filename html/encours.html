@@ -3,32 +3,62 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/encours.css">
-    <title>En cours...</title>
+    <title>Rotating 3D Head</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="header">
-        <a class="logo">"Ribeiro Anthony"</a>
-        <div class="header-right">
-            <a class="active" href="/html/home.html">'Home'</a>
-            <a href="../html/contact.html">'Contact'</a>
-            <a href="../html/about.html">'About'</a>
-        </div>
-    </div>
-    <h1>En cours...</h1>
-    <div class="projet">
+    <script src="https://threejs.org/build/three.js"></script>
 
-        <div class="info">
-            <p>This is where all my future projects will be post.</p>
-            <p>I'm now only working on Forum but it's not done yet.</p>
-        </div>
-        <div class="link">
-            Here you can find my github: <a href="https://github.com/EienNo00"> here</a>.
-        </div>
-    </div>
+    <script>
+        // Initialiser la scène
+        const scene = new THREE.Scene();
+
+        // Créer une caméra
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5;
+
+        // Créer un rendu
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Créer une sphère représentant la tête
+        const geometry = new THREE.SphereGeometry(1, 32, 32);
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
+        const head = new THREE.Mesh(geometry, material);
+        scene.add(head);
+
+        // Animation de rotation
+        const animate = function () {
+            requestAnimationFrame(animate);
+
+            // Rotation de la tête sur les axes X, Y et Z
+            head.rotation.x += 0.01;
+            head.rotation.y += 0.01;
+            head.rotation.z += 0.01;
+
+            renderer.render(scene, camera);
+        };
+
+        // Redimensionner la fenêtre
+        window.addEventListener('resize', function () {
+            const newWidth = window.innerWidth;
+            const newHeight = window.innerHeight;
+
+            camera.aspect = newWidth / newHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(newWidth, newHeight);
+        });
+
+        animate();
+    </script>
 </body>
 
 </html>
