@@ -417,7 +417,7 @@ h1 {
 }
 
 .wrapper:hover .image-wrapper {
-  width: 100vh; /* Ajustement pour correspondre au 80vh du conteneur principal */
+  width: 100vh;
 }
 #aboutMeSection {
   background-color: rgb(89, 73, 50);
